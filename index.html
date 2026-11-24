@@ -250,17 +250,32 @@
       .collage { max-width: 520px; width: 100%; margin: 12px auto -30px; height: 400px; }
       .guide { left: 0; }
     }
+    /* มือถือ: ข้อมูลหลักเป็นการ์ด 2×2 · ภาพเรียงเป็นตาราง ไม่ซ้อนกัน · วิทยากรเป็นแถบแยก */
     @media (max-width: 640px) {
-      .facts { grid-template-columns: 1fr 1fr; row-gap: 18px; }
-      .fact { padding: 0 0 0 18px; }
-      .fact:nth-child(odd) { padding-left: 0; border-left: 0; }
-      .fact dd { white-space: normal; }
       .hero-cta .btn { width: 100%; }
-      .collage { height: 330px; }
-      .guide .ph { width: 96px; height: 96px; }
-      .guide-label { padding: 8px 14px 8px 22px; }
-      .guide-label b { font-size: 15px; }
-      .guide-label small { font-size: 12px; }
+      .facts {
+        grid-template-columns: 1fr 1fr; row-gap: 0; margin-top: 28px; padding: 0;
+        border: 1px solid var(--navy-line); border-radius: 14px; background: rgba(255,255,255,.04); overflow: hidden;
+      }
+      .fact { padding: 14px 16px; border-left: 0; }
+      .fact:first-child { padding-left: 16px; }
+      .fact:nth-child(even) { border-left: 1px solid var(--navy-line); }
+      .fact:nth-child(n+3) { border-top: 1px solid var(--navy-line); }
+      .fact dt { font-size: 12.5px; }
+      .fact dd { font-size: 16px; white-space: normal; margin-top: 2px; }
+
+      .collage { position: static; height: auto; max-width: none; margin: 4px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+      .print, .print.p1, .print.p2, .print.p3 { position: relative; top: auto; right: auto; bottom: auto; left: auto; width: auto; }
+      .print.p1 { grid-column: 1 / -1; width: auto; transform: rotate(-1.5deg); }
+      .print.p2 { width: auto; transform: rotate(-2deg); z-index: auto; }
+      .print.p3 { width: auto; transform: rotate(2deg); z-index: auto; }
+      .print .ph { inset: 5px; }
+
+      .guide { position: static; grid-column: 1 / -1; margin-top: 14px; }
+      .guide .ph { width: 72px; height: 72px; border-width: 2px; }
+      .guide-label { flex: 1; margin-left: -12px; padding: 10px 16px 10px 24px; border-radius: 0 12px 12px 0; }
+      .guide-label b { font-size: 16px; }
+      .guide-label small { font-size: 12.5px; }
       .arch::before { transform: translate(12px, 12px); }
     }
 
@@ -585,7 +600,7 @@
         <div class="print p2"><div class="ph" data-ph="DSC01185.JPG"><img src="DSC01915.JPG" alt="บรรยากาศการเรียนรู้ในห้องอบรม" onerror="this.remove()" /></div></div>
         <div class="print p3"><div class="ph" data-ph="DSC01758.JPG"><img src="DSC01153.JPG" alt="ผู้เข้าร่วมแลกเปลี่ยนกันระหว่างกิจกรรม" onerror="this.remove()" /></div></div>
         <div class="guide">
-          <div class="ph" data-ph="วิทยากร"><img src="sp02.png" alt="พระอาจารย์สัจจาธิโก" style="border-radius:50%" " /></div>
+          <div class="ph" data-ph="วิทยากร"><img src="sp02.png" alt="พระอาจารย์สัจจาธิโก" style="border-radius:50%" /></div>
           <div class="guide-label"><small>วิทยากรโดย</small><b>พระอาจารย์สัจจาธิโก</b></div>
         </div>
       </div>
@@ -814,7 +829,7 @@
     <p class="tm-quote">ก่อนมาที่นี่ ฉันแบกทั้งความเครียดและความเหนื่อยล้าไว้เต็มไปหมด เพราะเข้มงวดกับตัวเองมากเกินไป และเครียดกับหลายเรื่องในชีวิต ทั้งเรื่องงาน เส้นทางอาชีพ และการพัฒนาตัวเอง คำสอนของหลวงพี่สัจจาธิโกช่วยให้ฉันเข้าใจ ทลายกำแพงนั้นลงได้ และเข้าถึงรากเหง้าของความเชื่อที่จำกัดตัวเองได้จริง ๆ สิ่งนั้นช่วยให้ฉันมองเรื่องเดิมในมุมใหม่ และเริ่มต้นด้วยความเชื่อใหม่ที่ส่งเสริมตัวเองได้มากขึ้น</p>
     <details class="tm-orig">
       <summary>ต้นฉบับภาษาอังกฤษ</summary>
-      <p lang="en">“I came here with a lot of like stress and like just tired. Because I've been so hard on myself and I've been really stressful in a lot of things in my life. For example work, career, self development. The teaching Luang Phee saccadhiko, he was able to help me like understand it, break through it, and also kind of get through that root cause of that limited belief. That helped me be able to reframe it and then start in another empowering belief...”</p>
+      <p lang="en">“I came here with a lot of like stress and like just tired. Because I've been so hard on myself and I've been really stressful in a lot of things in my life. For example work, career, self development. The teaching Luang Phee Satjathiko, he was able to help me like understand it, break through it, and also kind of get through that root cause of that limited belief. That helped me be able to reframe it and then start in another empowering belief...”</p>
     </details>
     <div class="tm-who"><span class="tm-avatar">ม</span><div><span class="tm-name">คุณวรทา (มิ้น)</span><span class="tm-role">33 ปี</span></div></div>
   </article>
