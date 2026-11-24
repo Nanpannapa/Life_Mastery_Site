@@ -797,8 +797,14 @@
     }
     .tm-card:hover { border-color: #CDB57D; transform: translateY(-2px); }
     .tm-mark { font-family: "Cormorant Garamond", Georgia, serif; font-size: 44px; line-height: 1; height: 22px; color: #CDB57D; }
-    .tm-quote { margin: 12px 0 0; font-size: 15.5px; line-height: 1.75; color: #171817; }
-    .tm-who { display: flex; align-items: center; gap: 12px; margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(205,181,125,.45); }
+    .tm-quote { margin: 12px 0 18px; font-size: 15.5px; line-height: 1.75; color: #171817; }
+    .tm-orig { margin: -8px 0 18px; font-size: 13.5px; color: #3E4147; }
+    .tm-orig summary { cursor: pointer; font-family: "Prompt", sans-serif; font-size: 13px; color: #A8893E; list-style: none; }
+    .tm-orig summary::-webkit-details-marker { display: none; }
+    .tm-orig summary::after { content: " +"; }
+    .tm-orig[open] summary::after { content: " −"; }
+    .tm-orig p { margin: 8px 0 0; padding-left: 12px; border-left: 2px solid rgba(205,181,125,.6); font-style: italic; line-height: 1.65; }
+    .tm-who { display: flex; align-items: center; gap: 12px; margin-top: auto; padding-top: 14px; border-top: 1px solid rgba(205,181,125,.45); }
     .tm-avatar {
       width: 38px; height: 38px; border-radius: 50%; flex: none;
       display: flex; align-items: center; justify-content: center;
@@ -812,25 +818,27 @@
 
   <article class="tm-card">
     <div class="tm-mark">“</div>
-    <p class="tm-quote">ตอนแรกกังวลมากว่าจะทิ้งงาน 6 วันได้ไหม แต่พอกลับมาพบว่าคุ้มค่าที่สุดในรอบหลายปี จากที่เคยแบกความเครียดและตัดสินใจด้วยความกลัว ตอนนี้มองเห็นลำดับความสำคัญของงานและครอบครัวชัดขึ้นมาก</p>
-    <div class="tm-who"><span class="tm-avatar">ก</span><div><span class="tm-name">คุณกิตติพงศ์</span><span class="tm-role">เจ้าของธุรกิจ · 36 ปี</span></div></div>
+    <p class="tm-quote">ก่อนมาที่นี่ ฉันแบกทั้งความเครียดและความเหนื่อยล้าไว้เต็มไปหมด เพราะเข้มงวดกับตัวเองมากเกินไป และเครียดกับหลายเรื่องในชีวิต ทั้งเรื่องงาน เส้นทางอาชีพ และการพัฒนาตัวเอง คำสอนของหลวงพี่สัจจาธิโกช่วยให้ฉันเข้าใจ ทลายกำแพงนั้นลงได้ และเข้าถึงรากเหง้าของความเชื่อที่จำกัดตัวเองได้จริง ๆ สิ่งนั้นช่วยให้ฉันมองเรื่องเดิมในมุมใหม่ และเริ่มต้นด้วยความเชื่อใหม่ที่ส่งเสริมตัวเองได้มากขึ้น</p>
+    <details class="tm-orig">
+      <summary>ต้นฉบับภาษาอังกฤษ</summary>
+      <p lang="en">“I came here with a lot of like stress and like just tired. Because I've been so hard on myself and I've been really stressful in a lot of things in my life. For example work, career, self development. The teaching Luang Phee Satjathiko, he was able to help me like understand it, break through it, and also kind of get through that root cause of that limited belief. That helped me be able to reframe it and then start in another empowering belief...”</p>
+    </details>
+    <div class="tm-who"><span class="tm-avatar">ม</span><div><span class="tm-name">คุณวรทา (มิ้น)</span><span class="tm-role">33 ปี</span></div></div>
   </article>
 
   <article class="tm-card">
     <div class="tm-mark">“</div>
-    <p class="tm-quote">ชอบที่เนื้อหาเชื่อมกลไกสมอง จิตวิทยา และ NLP เข้าด้วยกันอย่างเป็นเหตุเป็นผล ไม่ใช่การนั่งฟังบรรยายเฉย ๆ แต่ได้ฝึกสื่อสารและคลี่คลายปมในใจในพื้นที่ที่ปลอดภัย กลับไปทำงานร่วมกับทีมได้นิ่งและเข้าใจคนอื่นขึ้นเยอะครับ</p>
-    <div class="tm-who"><span class="tm-avatar">พ</span><div><span class="tm-name">คุณพิชญา</span><span class="tm-role">ผู้จัดการฝ่ายบริหาร · 38 ปี</span></div></div>
+    <p class="tm-quote">พอได้เรียนไป มันทำให้เราเข้าใจการที่เราทำบางอย่างซ้ำ ๆ เหมือนปัญหาบางอย่างที่เกิดขึ้นซ้ำ ๆ ว่ามันเป็นเพราะปมของเรา หรือความเชื่อจำกัดที่คอยชักนำเรา เมื่อก่อนไม่เข้าใจที่หลวงพี่บอกว่าวางใจ วางใจยังไง วางใจให้ถูก แต่พอมารู้ตอนนี้ ก็ค่อย ๆ ซึมซับ แล้วจะนำสิ่งนี้ไปฝึกใช้ในชีวิตค่ะ</p>
+    <div class="tm-who"><span class="tm-avatar">ม</span><div><span class="tm-name">คุณพรรณอร (มีน)</span><span class="tm-role">นักรังสีเทคนิค · 27 ปี</span></div></div>
   </article>
 
   <article class="tm-card">
     <div class="tm-mark">“</div>
-    <p class="tm-quote">ช่วงอายุ 30 ต้น ๆ รู้สึกเหมือนใช้ชีวิตตามความคาดหวังของคนรอบข้างจนหมดไฟ คอร์สนี้ช่วยให้เราได้หยุดทบทวนและเขียนเป้าหมายชีวิตของตัวเองใหม่จริง ๆ ที่พักที่นครปฐมก็สะอาด สบาย และดูแลดีมากค่ะ</p>
-    <div class="tm-who"><span class="tm-avatar">ณ</span><div><span class="tm-name">คุณณัฐธิดา</span><span class="tm-role">สายงานวางแผนกลยุทธ์ · 32 ปี</span></div></div>
+    <p class="tm-quote">แต่ก่อนรู้สึกว่ายังไม่เห็นทาง ยังไม่รู้ว่าจะจัดการกับความทุกข์เรื่องเล็ก ๆ น้อย ๆ ที่เจอข้างนอกยังไง พอได้มาเรียนคอร์สนี้ เรารู้หลัก แล้วก็ได้หาวิธีดูแลใจเมื่อเจอกับความทุกข์ต่าง ๆ ครับ พอเราตั้งเป้าหมายแบบไม่มีความเชื่อที่จำกัด ทำให้เรามีความเชื่อใหม่ ๆ ขึ้นมา แล้วมันจะมีความสุขง่ายขึ้นครับ</p>
+    <div class="tm-who"><span class="tm-avatar">จ</span><div><span class="tm-name">คุณพิสิษฐ์ (เจมส์)</span><span class="tm-role">นักศึกษา · 23 ปี</span></div></div>
   </article>
 </div>
 
-    </div>
-  </section>
 
 <!-- ================= EXPERIENCE & VENUE (วางก้อนนี้ทั้งก้อน ใช้งานได้เองไม่ต้องพึ่ง CSS อื่น) ================= -->
 <section id="experience" class="ev">
